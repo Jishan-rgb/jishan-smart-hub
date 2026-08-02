@@ -106,3 +106,94 @@ saveData();
 }
 
 showServices();
+// =========================
+// JISHAN SMART HUB
+// script.js Part 1
+// =========================
+
+let services = JSON.parse(localStorage.getItem("services")) || [
+  { name: "Online Form Fill-up", price: 80 },
+  { name: "Black & White Print", price: 4 },
+  { name: "Colour Print", price: 8 },
+  { name: "Passport Size Photo", price: 25 },
+  { name: "PAN Card Apply", price: 120 }
+];
+
+const table = document.getElementById("serviceTable");
+
+function saveServices() {
+  localStorage.setItem("services", JSON.stringify(services));
+}
+
+function renderServices() {
+  if (!table) return;
+
+  table.innerHTML = "";
+
+  services.forEach((service, index) => {
+    table.innerHTML += `
+      <tr>
+        <td contenteditable="true"
+            onblur="updateName(${index}, this.innerText)">
+          ${service.name}
+        </td>
+
+        <td contenteditable="true"
+            onblur="updatePrice(${index}, this.innerText)">
+          ${service.price}
+        </td>
+
+        <td>
+          <button onclick="deleteService(${index})">
+            Delete
+          </button>
+        </td>
+      </tr>
+    `;
+  });
+
+  saveServices();
+}
+
+function addService() {
+
+  const name =
+    document.getElementById("serviceName").value.trim();
+
+  const price =
+    document.getElementById("servicePrice").value.trim();
+
+  if (name === "" || price === "") {
+    alert("Please enter service name and rate.");
+    return;
+  }
+
+  services.push({
+    name,
+    price
+  });
+
+  document.getElementById("serviceName").value = "";
+  document.getElementById("servicePrice").value = "";
+
+  renderServices();
+}
+
+function deleteService(index) {
+  if (confirm("Delete this service?")) {
+    services.splice(index, 1);
+    renderServices();
+  }
+}
+
+function updateName(index, value) {
+  services[index].name = value;
+  saveServices();
+}
+
+function updatePrice(index, value) {
+  services[index].price = value;
+  saveServices();
+}
+
+renderServices();
