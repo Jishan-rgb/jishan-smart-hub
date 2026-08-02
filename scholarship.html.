@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Scholarship Services | Jishan Smart Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<div>
+
+<h2>JISHAN SMART HUB</h2>
+
+<p>Scholarship Portal</p>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="scholarship.html">Scholarship</a></li>
+
+<li><a href="documents.html">Documents</a></li>
+
+<li><a href="jobs.html">Jobs</a></li>
+
+<li><a href="forms.html">Forms</a></li>
+
+<li><a href="banking.html">Banking</a></li>
+
+<li><a href="ticket.html">Ticket</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Scholarship Services</h1>
+
+<p>
+
+Apply for Government Scholarships quickly and securely through Jishan Smart Hub.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Scholarship..."
+onkeyup="searchService()">
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+</section>
+
+<!-- ================= SCHOLARSHIP LIST ================= -->
+
+<section class="services">
+
+<h2 class="section-title">
+
+Available Scholarships
+
+</h2>
+
+<div class="service-grid" id="scholarshipContainer">
+  <!-- ================= SCHOLARSHIP CARDS ================= -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>UP Scholarship</h3>
+
+<p><b>Required Documents:</b></p>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>Income Certificate</li>
+<li>Caste Certificate (if applicable)</li>
+<li>Bank Passbook</li>
+<li>Previous Marksheet</li>
+<li>Passport Size Photo</li>
+</ul>
+
+<p><b>Service Charge:</b> ₹100</p>
+
+<p><b>Last Date:</b> 30 September 2026</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn">Apply Now</a>
+
+<a href="#" class="btn2">Official Website</a>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-school"></i>
+
+<h3>National Scholarship Portal (NSP)</h3>
+
+<p><b>Required Documents:</b></p>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>Income Certificate</li>
+<li>Bonafide Certificate</li>
+<li>Bank Passbook</li>
+<li>Passport Photo</li>
+</ul>
+
+<p><b>Service Charge:</b> ₹120</p>
+
+<p><b>Last Date:</b> Update Soon</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn">Apply Now</a>
+
+<a href="#" class="btn2">Official Website</a>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<h3>Minority Scholarship</h3>
+
+<p><b>Required Documents:</b></p>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>Income Certificate</li>
+<li>Minority Certificate (if required)</li>
+<li>Bank Passbook</li>
+<li>Photo</li>
+</ul>
+
+<p><b>Service Charge:</b> ₹100</p>
+
+<p><b>Last Date:</b> Update Soon</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn">Apply Now</a>
+
+<a href="#" class="btn2">Official Website</a>
+
+</div>
+
+</div>
+  <!-- ================= MORE SCHOLARSHIPS ================= -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-user-check"></i>
+
+<h3>OBC Scholarship</h3>
+
+<p><b>Required Documents:</b></p>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>OBC Certificate</li>
+<li>Income Certificate</li>
+<li>Bank Passbook</li>
+<li>Passport Size Photo</li>
+</ul>
+
+<p><b>Service Charge:</b> ₹100</p>
+
+<p><b>Last Date:</b> Update Soon</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn">Apply Now</a>
+
+<a href="#" class="btn2">Official Website</a>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>SC/ST Scholarship</h3>
+
+<p><b>Required Documents:</b></p>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>SC/ST Certificate</li>
+<li>Income Certificate</li>
+<li>Bank Passbook</li>
+<li>Passport Size Photo</li>
+</ul>
+
+<p><b>Service Charge:</b> ₹100</p>
+
+<p><b>Last Date:</b> Update Soon</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn">Apply Now</a>
+
+<a href="#" class="btn2">Official Website</a>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-book-open"></i>
+
+<h3>Post Matric Scholarship</h3>
+
+<p><b>Required Documents:</b></p>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>Income Certificate</li>
+<li>Previous Marksheet</li>
+<li>College ID Card</li>
+<li>Bank Passbook</li>
+</ul>
+
+<p><b>Service Charge:</b> ₹120</p>
+
+<p><b>Last Date:</b> Update Soon</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn">Apply Now</a>
+
+<a href="#" class="btn2">Official Website</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= IMPORTANT NOTICE ================= -->
+
+<section class="notice">
+
+<h2 class="section-title">Important Notice</h2>
+
+<div class="notice-box">
+
+<marquee>
+
+⚠️ Scholarship ki Last Date aur Required Documents samay-samay par badal sakte hain. Apply karne se pehle official notification zarur check karein.
+
+</marquee>
+
+</div>
+
+</section><!-- ================= EDITABLE INFORMATION ================= -->
+
+<section class="services">
+
+<h2 class="section-title">
+Scholarship Information
+</h2>
+
+<div class="service-card">
+
+<h3>Application Process</h3>
+
+<table class="rate-table">
+
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td>Service Charge</td>
+<td><span id="scholarshipCharge">₹100</span></td>
+</tr>
+
+<tr>
+<td>Last Date</td>
+<td><span id="scholarshipLastDate">Update Soon</span></td>
+</tr>
+
+<tr>
+<td>Processing Time</td>
+<td><span id="processingTime">3-7 Working Days</span></td>
+</tr>
+
+<tr>
+<td>Status</td>
+<td><span id="applicationStatus">Open</span></td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="service-card">
+
+<h3>Required Documents</h3>
+
+<ul id="documentsList">
+
+<li>Aadhaar Card</li>
+
+<li>Income Certificate</li>
+
+<li>Caste Certificate (if applicable)</li>
+
+<li>Residence Certificate</li>
+
+<li>Previous Marksheet</li>
+
+<li>Bank Passbook</li>
+
+<li>Passport Size Photo</li>
+
+</ul>
+
+</div>
+
+<div class="service-card">
+
+<h3>Useful Links</h3>
+
+<a id="officialLink"
+href="#"
+class="btn">
+Official Website
+</a>
+
+<br><br>
+
+<a id="applyLink"
+href="#"
+class="btn2">
+Apply Online
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= NOTE ================= -->
+
+<section class="notice">
+
+<div class="notice-box">
+
+<strong>Note:</strong>
+
+Scholarship Charges, Last Date, Documents aur Links ko baad me Admin Panel se update kiya ja sakega.
+
+</div>
+
+</section><!-- ================= FAQ ================= -->
+
+<section class="faq">
+
+<h2 class="section-title">
+Frequently Asked Questions
+</h2>
+
+<div class="faq-box">
+
+<h3>Scholarship Form kaun bhar sakta hai?</h3>
+<p>Jo student eligibility criteria ko meet karta hai, woh apply kar sakta hai.</p>
+
+<h3>Documents kab verify hote hain?</h3>
+<p>Application submit hone ke baad institute aur department verification hota hai.</p>
+
+<h3>Status kaise check karein?</h3>
+<p>Official portal ya Jishan Smart Hub se status check kar sakte hain.</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact">
+
+<h2 class="section-title">
+Need Help?
+</h2>
+
+<div class="contact-box">
+
+<div>
+
+<h3>Jishan Smart Hub</h3>
+
+<p><i class="fa-solid fa-location-dot"></i> Bansi, Siddharth Nagar, Uttar Pradesh</p>
+
+<p><i class="fa-solid fa-phone"></i> +91 8935097258</p>
+
+<p><i class="fa-solid fa-envelope"></i> jishanrahman13@gmail.com</p>
+
+</div>
+
+<div>
+
+<a href="https://wa.me/918935097258" class="btn">
+<i class="fab fa-whatsapp"></i> Chat on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<h2>JISHAN SMART HUB</h2>
+
+<p>
+Scholarship | Government Services | Digital Seva
+</p>
+
+<p>
+© <span id="footerYear"></span> Jishan Smart Hub. All Rights Reserved.
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
