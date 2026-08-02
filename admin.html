@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel | Jishan Smart Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-user-shield"></i>
+
+<div>
+
+<h2>JISHAN SMART HUB</h2>
+
+<p>Admin Dashboard</p>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="login-page">
+
+<div class="service-card" style="max-width:450px;margin:50px auto;">
+
+<h2 style="text-align:center;">Admin Login</h2>
+
+<input
+type="text"
+id="username"
+placeholder="Username">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="adminLogin()" class="btn">
+Login
+</button>
+
+<p id="loginMsg"></p>
+
+</div>
+
+</section>
+
+<section id="dashboard" style="display:none;">
+
+<h2 class="section-title">Dashboard</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+<h3>Scholarships</h3>
+<p>Edit • Add • Delete</p>
+</div>
+
+<div class="service-card">
+<h3>Documents</h3>
+<p>Edit • Add • Delete</p>
+</div>
+
+<div class="service-card">
+<h3>Jobs</h3>
+<p>Edit • Add • Delete</p>
+</div>
+
+<div class="service-card">
+<h3>Banking</h3>
+<p>Edit • Add • Delete</p>
+</div>
+
+<div class="service-card">
+<h3>Forms</h3>
+<p>Edit • Add • Delete</p>
+</div>
+
+<div class="service-card">
+<h3>Tickets</h3>
+<p>Edit • Add • Delete</p>
+</div>
+
+</div><!-- ================= ADD NEW SERVICE ================= -->
+
+<div class="services">
+
+<h2 class="section-title">Add New Service</h2>
+
+<div class="service-card">
+
+<select id="serviceCategory">
+<option value="Scholarship">Scholarship</option>
+<option value="Documents">Documents</option>
+<option value="Jobs">Jobs</option>
+<option value="Banking">Banking</option>
+<option value="Forms">Forms</option>
+<option value="Ticket">Ticket</option>
+</select>
+
+<input type="text" id="serviceName" placeholder="Service Name">
+
+<input type="text" id="serviceCharge" placeholder="Service Charge">
+
+<input type="text" id="serviceLastDate" placeholder="Last Date">
+
+<input type="text" id="serviceTime" placeholder="Processing Time">
+
+<textarea id="serviceDocuments"
+placeholder="Required Documents (One per line)"
+rows="6"></textarea>
+
+<input type="url" id="officialLink"
+placeholder="Official Website Link">
+
+<input type="url" id="applyLink"
+placeholder="Apply Link">
+
+<input type="text" id="serviceImage"
+placeholder="Image URL">
+
+<button class="btn" onclick="addService()">
+<i class="fa-solid fa-plus"></i>
+Add Service
+</button>
+
+</div>
+
+</div>
+
+<!-- ================= SERVICE LIST ================= -->
+
+<section class="services">
+
+<h2 class="section-title">Manage Services</h2>
+
+<div id="adminServiceList" class="service-grid">
+
+<!-- Services will appear here -->
+
+</div>
+
+</section>
+  <!-- ================= EDIT SERVICE ================= -->
+
+<section class="services">
+
+<h2 class="section-title">Update Website</h2>
+
+<div class="service-card">
+
+<input type="text" id="editId" placeholder="Service ID">
+
+<input type="text" id="editName" placeholder="New Service Name">
+
+<input type="text" id="editCharge" placeholder="New Service Charge">
+
+<input type="text" id="editLastDate" placeholder="New Last Date">
+
+<textarea id="editDocuments"
+placeholder="New Required Documents"
+rows="5"></textarea>
+
+<input type="url" id="editOfficial"
+placeholder="Official Website Link">
+
+<input type="url" id="editApply"
+placeholder="Apply Link">
+
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+
+<button class="btn" onclick="updateService()">
+<i class="fa-solid fa-pen"></i>
+Update
+</button>
+
+<button class="btn2" onclick="deleteService()">
+<i class="fa-solid fa-trash"></i>
+Delete
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="services">
+
+<h2 class="section-title">Website Statistics</h2>
+
+<div class="counter-grid">
+
+<div class="counter-card">
+<h3 id="totalServices">0</h3>
+<p>Total Services</p>
+</div>
+
+<div class="counter-card">
+<h3 id="totalVisitors">0</h3>
+<p>Total Visitors</p>
+</div>
+
+<div class="counter-card">
+<h3 id="totalClicks">0</h3>
+<p>Total Clicks</p>
+</div>
+
+<div class="counter-card">
+<h3 id="todayVisitors">0</h3>
+<p>Today's Visitors</p>
+</div>
+
+</div>
+
+</section><!-- ================= SETTINGS ================= -->
+
+<section class="services">
+
+<h2 class="section-title">Website Settings</h2>
+
+<div class="service-card">
+
+<input type="text" id="websiteName" placeholder="Website Name">
+
+<input type="text" id="ownerName" placeholder="Owner Name">
+
+<input type="text" id="contactNumber" placeholder="Mobile Number">
+
+<input type="email" id="emailAddress" placeholder="Email Address">
+
+<input type="text" id="whatsappNumber" placeholder="WhatsApp Number">
+
+<textarea id="noticeBoard" rows="4"
+placeholder="Notice Board"></textarea>
+
+<button class="btn" onclick="saveSettings()">
+<i class="fa-solid fa-floppy-disk"></i>
+Save Settings
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= ADMIN FOOTER ================= -->
+
+<footer class="footer">
+
+<h2>JISHAN SMART HUB</h2>
+
+<p>Admin Dashboard</p>
+
+<p>© <span id="footerYear"></span> All Rights Reserved.</p>
+
+</footer>
+
+<script src="script.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
