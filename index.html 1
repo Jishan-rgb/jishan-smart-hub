@@ -1,19 +1,27 @@
-index.html
-style.css
-script.js
+<!DOCTYPE html>
+<html>
+<head>
+   ...
+</head>
+<body>
 
-scholarship.html
-documents.html
-jobs.html
-forms.html
-banking.html
-ticket.html
+Header
 
-admin.html
-admin.css
-admin.js
-<a href="scholarship.html">
+Navigation
 
-Scholarship
+Hero Banner
 
-</a>
+Services
+
+About
+
+Rate List
+
+Contact
+
+Footer
+
+<script src="script.js"></script>
+
+</body>
+</html>
