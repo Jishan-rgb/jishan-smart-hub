@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Customer Dashboard | Jishan Smart Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body onload="protectPage(); loadProfile();">
+
+
+<header>
+
+<div class="logo">
+
+<h2>JISHAN SMART HUB</h2>
+
+<p>Customer Dashboard</p>
+
+</div>
+
+</header>
+
+
+<section class="dashboard">
+
+
+<div class="service-card">
+
+<h2>Welcome 👋</h2>
+
+<h3 id="userName">
+Loading...
+</h3>
+
+<p id="userEmail"></p>
+
+<p id="userPhone"></p>
+
+
+<button class="btn2" onclick="logout()">
+Logout
+</button>
+
+
+</div>
+
+
+
+<div class="service-card">
+
+<h2>My Services</h2>
+
+<p>
+📄 Application Status
+</p>
+
+<p>
+🎓 Scholarship Updates
+</p>
+
+<p>
+🏦 Banking Services
+</p>
+
+<p>
+📢 Latest Notices
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+<script type="module">
+
+import "./firebase.js";
+
+import "./auth.js";
+
+
+</script>
+
+
+</body>
+
+</html>
